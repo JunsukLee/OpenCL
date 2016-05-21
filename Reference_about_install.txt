@@ -1,0 +1,47 @@
+Checking Graphic Card H/W 
+ - lspci | grep VGA
+
+Install NVIDA-CUDA
+ - apt-get install nvidia-cuda-toolkit
+ - https://developer.nvidia.com/ => Direct Download
+ - Reference <http://www.prinmath.com/csci5229/misc/install-gpu.html>
+
+ ● NDIVIA Reference : http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/#choose-installation-method
+ ● http://enginius.tistory.com/529
+ 
+  1. Checking version for Graphic card
+   => lspci | grep -i nvidia
+   
+  2. Checking version for Gcc
+   => gcc --version
+   
+  3. Download CUDA-toolkit
+   => https://developer.nvidia.com/cuda-downloads
+   
+  4. Install
+   => $ sudo dpkg -i cuda-repo-<distro>_<version>_<architecture>.deb
+   => $ sudo apt-get update
+   => $ sudo apt-get install cuda
+   
+  5. Setting enviroment variable
+   => $ cd
+   => $ gedit .bashrc 
+   
+   <In the opened window , add the following two lines at the end.>
+   => $ export PATH=/usr/local/cuda-6.5/bin:$PATH
+   => $ export LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64:$LD_LIBRARY_PATH
+   
+  6. Checking installation
+   => $ cuda-install-samples-6.5.sh ~
+   => $ cd
+   => $ cd NVIDIA_CUDA-6.5_Samples
+   => $ make
+   
+   After numerous examples to compile it took some time doing this.
+   After completing, Make a running example(.exe).
+   
+   => $ ./simplePrintf
+   => $ ./matrixMul
+   => $ ./matrixMulCUBLAS
+
+

@@ -10,6 +10,9 @@
 #define MEM_SIZE (128)
 #define MAX_SOURCE_SIZE (0x100000)
 
+// intel : gcc -o hello hello.c -lOpenCL
+// cuda  : gcc -I/usr/local/cuda/include -o hello hello.c -lOpenCL
+
 int main()
 {
 	cl_device_id device_id = NULL;

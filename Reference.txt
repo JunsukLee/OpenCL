@@ -1,0 +1,9 @@
+Checking Graphic Card H/W 
+ - lspci | grep VGA
+
+Install NVIDA-CUDA
+ - apt-get install nvidia-cuda-toolkit
+ - https://developer.nvidia.com/ => Direct Download
+ - Reference <http://www.prinmath.com/csci5229/misc/install-gpu.html>
+
+ ● NDIVIA Reference : http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/#choose-installation-method

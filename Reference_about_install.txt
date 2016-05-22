@@ -8,6 +8,8 @@ Install NVIDA-CUDA
 
  ● NDIVIA Reference : http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/#choose-installation-method
  ● http://enginius.tistory.com/529
+ ● https://www.pugetsystems.com/labs/articles/NVIDIA-CUDA-with-Ubuntu-16-04-beta-on-a-laptop-if-you-just-cannot-wait-775/
+ ● http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda_7.5.18_linux.run
  
   1. Checking version for Graphic card
    => lspci | grep -i nvidia
@@ -44,4 +46,15 @@ Install NVIDA-CUDA
    => $ ./matrixMul
    => $ ./matrixMulCUBLAS
 
+
+   or
+   1. chmod 755 cuda_7.5.18_linux.run
+   2. sudo ./cuda_7.5.18_linux.run --override
+   3. sudo emacs -nw /etc/profile.d/cuda.sh
+       => export PATH=$PATH:/usr/local/cuda/bin
+   4. sudo emacs -nw /etc/ld.so.conf.d/cuda.conf
+       => /usr/local/cuda/lib64
+   5. source /etc/profile.d/cuda.conf
+   6. sudo ldconfig
+    
 
